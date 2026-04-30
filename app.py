@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 
 data = pd.read_csv("pm25_results.csv")
-time = data["t_plot"]
+time = pd.to_datetime(data["t_plot"])
 actual = data["Y"]
 predicted = data["Y_pred"]
 st.title("PM2.5 Dashboard (From MATLAB Output)")
@@ -18,5 +18,4 @@ ax.set_xlabel("Time")
 ax.set_ylabel("PM2.5")
 ax.legend()
 ax.grid(True)
-st.pyplot(fig)
-
+st.pyplot(fig, clear_figure=True)
