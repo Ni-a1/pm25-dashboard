@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-data = pd.read_csv(r"C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\pm25_results.csv")
+data = pd.read_csv("pm25_results.csv")
 time = data["t_plot"]
 actual = data["Y"]
 predicted = data["Y_pred"]
