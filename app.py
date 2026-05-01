@@ -12,7 +12,7 @@ mse = ((actual - predicted) ** 2).mean()
 st.metric("MSE", round(mse, 2))
 view_option = st.selectbox(
     "Select View",
-    ["Actual vs Predicted", "Only Actual", "Only Predicted"]
+    ["Actual vs Predicted", "Only Actual", "Only Predicted"])
 fig, ax = plt.subplots()
 
 if view_option == "Actual vs Predicted":
