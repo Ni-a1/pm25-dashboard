@@ -19,3 +19,5 @@ ax.set_ylabel("PM2.5")
 ax.legend()
 ax.grid(True)
 st.pyplot(fig, clear_figure=True)
+if st.checkbox("Show Raw Data"):
+    st.write(data)
